@@ -140,6 +140,10 @@ public class JavaFitService {
                     a.setHorario(nueva.getHorario());
                     a.setMonitor(nueva.getMonitor());
                     a.setImagen(nueva.getImagen());
+                    if (a instanceof ActividadEspecial actualEspecial && nueva instanceof ActividadEspecial nuevaEspecial) {
+                        actualEspecial.setPrecio(nuevaEspecial.getPrecio());
+                        actualEspecial.setDescripcion(nuevaEspecial.getDescripcion());
+                    }
                     return true;
                 }).orElse(false);
     }
