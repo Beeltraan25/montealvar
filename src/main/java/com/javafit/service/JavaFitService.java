@@ -282,6 +282,13 @@ public class JavaFitService {
         return new ArrayList<>(data.getUsuarios());
     }
 
+    public List<Reserva> getReservasPorSocio(String correoSocio) {
+        return data.getReservas().stream()
+                .filter(r -> r.getSocio().getCorreo().equalsIgnoreCase(correoSocio))
+                .sorted(Comparator.comparing(Reserva::getFechaReserva))
+                .toList();
+    }
+
     private void generarRecibo(Socio socio, ActividadEspecial actividad, double precioFinal, Path carpetaRecibos) {
         try {
             Files.createDirectories(carpetaRecibos);
