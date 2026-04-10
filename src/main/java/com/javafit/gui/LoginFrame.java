@@ -86,6 +86,11 @@ public class LoginFrame extends JFrame {
             String clave = new String(claveField.getPassword());
             String rol = (String) rolCombo.getSelectedItem();
 
+            if (correo.isBlank() || clave.isBlank()) {
+                JOptionPane.showMessageDialog(this, "Debes introducir correo y clave", "JavaFit", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+
             Optional<Usuario> usuario = authController.login(correo, clave);
             if (usuario.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Credenciales incorrectas", "JavaFit", JOptionPane.ERROR_MESSAGE);
@@ -140,6 +145,11 @@ public class LoginFrame extends JFrame {
 
         int result = JOptionPane.showConfirmDialog(this, panel, "Registro de socio", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
         if (result != JOptionPane.OK_OPTION) {
+            return;
+        }
+
+        if (nombre.getText().isBlank() || correo.getText().isBlank() || clave.getPassword().length == 0) {
+            JOptionPane.showMessageDialog(this, "Nombre, correo y clave son obligatorios", "JavaFit", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
@@ -438,6 +448,9 @@ public class LoginFrame extends JFrame {
             JTextField monitor = new JTextField(actual != null ? actual.getMonitor() : "");
             JTextField imagen = new JTextField(actual != null ? actual.getImagen() : "images/default.png");
             JCheckBox especial = new JCheckBox("Actividad especial", actual instanceof ActividadEspecial);
+            if (actual != null) {
+                especial.setEnabled(false);
+            }
             JTextField precio = new JTextField(actual instanceof ActividadEspecial ae ? String.valueOf(ae.getPrecio()) : "0");
             JTextField descripcion = new JTextField(actual instanceof ActividadEspecial ae ? ae.getDescripcion() : "");
 
@@ -479,6 +492,9 @@ public class LoginFrame extends JFrame {
             }
 
             try {
+                if (titulo.getText().isBlank() || monitor.getText().isBlank() || salaNombre.getText().isBlank()) {
+                    throw new IllegalArgumentException("Título, monitor y sala son obligatorios");
+                }
                 Sala sala = new Sala(salaNombre.getText().trim(), Integer.parseInt(aforo.getText().trim()));
                 Horario horario = new Horario(
                         (DayOfWeek) dia.getSelectedItem(),
