@@ -1,5 +1,6 @@
 package com.javafit.controller;
 
+import com.javafit.model.Socio;
 import com.javafit.model.Usuario;
 import com.javafit.service.JavaFitService;
 
@@ -17,5 +18,13 @@ public class AuthController {
 
     public Optional<Usuario> login(String correo, String clave) {
         return service.login(correo, clave);
+    }
+
+    public boolean registrarSocio(Socio socio) {
+        return service.registrarSocio(socio);
+    }
+
+    public JavaFitService getService() {
+        return service;
     }
 }
