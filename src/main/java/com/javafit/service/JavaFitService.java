@@ -140,6 +140,10 @@ public class JavaFitService {
                     a.setHorario(nueva.getHorario());
                     a.setMonitor(nueva.getMonitor());
                     a.setImagen(nueva.getImagen());
+                    if (a instanceof ActividadEspecial actualEspecial && nueva instanceof ActividadEspecial nuevaEspecial) {
+                        actualEspecial.setPrecio(nuevaEspecial.getPrecio());
+                        actualEspecial.setDescripcion(nuevaEspecial.getDescripcion());
+                    }
                     return true;
                 }).orElse(false);
     }
@@ -276,6 +280,13 @@ public class JavaFitService {
 
     public List<Usuario> getUsuarios() {
         return new ArrayList<>(data.getUsuarios());
+    }
+
+    public List<Reserva> getReservasPorSocio(String correoSocio) {
+        return data.getReservas().stream()
+                .filter(r -> r.getSocio().getCorreo().equalsIgnoreCase(correoSocio))
+                .sorted(Comparator.comparing(Reserva::getFechaReserva))
+                .toList();
     }
 
     private void generarRecibo(Socio socio, ActividadEspecial actividad, double precioFinal, Path carpetaRecibos) {
