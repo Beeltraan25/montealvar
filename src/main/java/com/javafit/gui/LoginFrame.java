@@ -40,7 +40,7 @@ import java.util.Locale;
 import java.util.Optional;
 
 /**
- * Ventana de inicio de sesión base para JavaFit.
+ * Ventana de inicio de sesión para JavaFit.
  */
 public class LoginFrame extends JFrame {
     private final AuthController authController;
