@@ -1,0 +1,1895 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Montealvar Club de Golf | Golf, naturaleza y eventos en Guadalajara</title>
+  <meta name="description" content="Montealvar Club de Golf: 18 hoyos par 72 en el bosque de Valdenazar, a 30 minutos de Madrid. Reserva green fee, consulta tarifas, torneos, restaurante y eventos.">
+  <meta property="og:title" content="Montealvar Club de Golf">
+  <meta property="og:description" content="Un recorrido concebido para la diversión y disfrute de todo tipo de jugador.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://montealvar.com/">
+  <meta property="og:image" content="https://montealvar.com/wp-content/uploads/2020/06/instalaciones-campo-brillo.png">
+  <style>
+    :root {
+      --pine: #123f2b;
+      --pine-2: #1f5c3f;
+      --grass: #6f8f42;
+      --gold: #c69b4f;
+      --earth: #876239;
+      --cream: #f7f2e8;
+      --sand: #e8dbc6;
+      --white: #ffffff;
+      --ink: #17231e;
+      --muted: #66746d;
+      --line: rgba(18, 63, 43, 0.16);
+      --shadow: 0 24px 70px rgba(16, 39, 29, 0.16);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--earth);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      margin: 14px 0 12px;
+      color: var(--pine);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 500;
+      line-height: 1.06;
+    }
+
+    .section-lead {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 0 20px;
+      cursor: pointer;
+      font-weight: 800;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #241706;
+      box-shadow: 0 16px 32px rgba(198, 155, 79, 0.28);
+    }
+
+    .btn-primary:hover {
+      background: #d4aa5f;
+    }
+
+    .btn-secondary {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-outline {
+      color: var(--pine);
+      border-color: rgba(18, 63, 43, 0.25);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      z-index: 20;
+      width: 100%;
+      transition: background 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+    }
+
+    .site-header.is-scrolled {
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 242, 232, 0.94);
+      box-shadow: 0 16px 34px rgba(18, 63, 43, 0.08);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-wrap {
+      display: flex;
+      min-height: 78px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+    }
+
+    .site-header.is-scrolled .brand {
+      color: var(--pine);
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 50%;
+      background: rgba(18, 63, 43, 0.18);
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.16rem;
+      font-weight: 700;
+    }
+
+    .site-header.is-scrolled .brand-mark {
+      border-color: rgba(18, 63, 43, 0.22);
+      background: var(--pine);
+    }
+
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 50%;
+      padding: 6px;
+      background: rgba(255, 255, 255, 0.94);
+      object-fit: contain;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
+    }
+
+    .site-header.is-scrolled .brand-logo {
+      border-color: rgba(18, 63, 43, 0.18);
+      background: var(--white);
+    }
+
+    .brand-name {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12rem;
+      line-height: 1;
+    }
+
+    .brand-meta {
+      display: block;
+      margin-top: 3px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .site-header.is-scrolled .brand-meta {
+      color: var(--earth);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav a {
+      border-radius: 999px;
+      padding: 10px 12px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.92rem;
+      font-weight: 750;
+      transition: background 180ms ease, color 180ms ease;
+    }
+
+    .site-header.is-scrolled .nav a {
+      color: var(--pine);
+    }
+
+    .nav a:hover,
+    .nav a.is-active {
+      background: rgba(255, 255, 255, 0.16);
+      color: var(--white);
+    }
+
+    .site-header.is-scrolled .nav a:hover,
+    .site-header.is-scrolled .nav a.is-active {
+      background: rgba(18, 63, 43, 0.08);
+      color: var(--pine-2);
+    }
+
+    .nav-cta {
+      margin-left: 8px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      background: rgba(18, 63, 43, 0.18);
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      border-radius: 99px;
+      background: currentColor;
+    }
+
+    .site-header.is-scrolled .menu-toggle {
+      border-color: rgba(18, 63, 43, 0.18);
+      color: var(--pine);
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: clamp(680px, 92vh, 900px);
+      align-items: end;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(10, 28, 19, 0.84), rgba(10, 28, 19, 0.46) 46%, rgba(10, 28, 19, 0.2)),
+        linear-gradient(0deg, rgba(10, 28, 19, 0.56), rgba(10, 28, 19, 0.04) 46%),
+        url("https://montealvar.com/wp-content/uploads/2020/06/instalaciones-campo-brillo.png") center / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 110px;
+      background: linear-gradient(180deg, rgba(247, 242, 232, 0), var(--cream));
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(280px, 0.36fr);
+      gap: 48px;
+      align-items: end;
+      padding: 146px 0 110px;
+    }
+
+    .hero-logo {
+      width: clamp(92px, 12vw, 148px);
+      border-radius: 50%;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero h1 {
+      max-width: 820px;
+      margin: 18px 0 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 8vw, 6.9rem);
+      font-weight: 500;
+      line-height: 0.95;
+      text-wrap: balance;
+    }
+
+    .hero-copy {
+      max-width: 700px;
+      margin: 0 0 30px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: clamp(1.06rem, 2.2vw, 1.3rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-panel {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: rgba(16, 39, 29, 0.5);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-panel dl {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+    }
+
+    .hero-panel dt {
+      color: rgba(255, 255, 255, 0.66);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .hero-panel dd {
+      margin: 4px 0 0;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.5rem;
+      line-height: 1.05;
+    }
+
+    .quick-strip {
+      position: relative;
+      z-index: 2;
+      margin-top: -54px;
+    }
+
+    .quick-strip .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .quick-item {
+      padding: 24px;
+      border-right: 1px solid var(--line);
+    }
+
+    .quick-item:last-child {
+      border-right: 0;
+    }
+
+    .quick-item span {
+      display: block;
+      color: var(--earth);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .quick-item strong {
+      display: block;
+      margin-top: 6px;
+      color: var(--pine);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+    section {
+      scroll-margin-top: 92px;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .field-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(300px, 0.52fr);
+      gap: 54px;
+      align-items: center;
+    }
+
+    .field-copy p {
+      color: var(--muted);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      min-height: 118px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      background: #fbf8f1;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--pine);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.1rem;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+
+    .image-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .image-stack figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .image-stack img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .mini-note {
+      border-left: 3px solid var(--gold);
+      padding: 16px 18px;
+      background: rgba(198, 155, 79, 0.12);
+      color: var(--pine);
+      font-weight: 700;
+    }
+
+    .gallery-block {
+      margin-top: 56px;
+    }
+
+    .gallery-block .section-lead {
+      margin-bottom: 28px;
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr 0.85fr;
+      gap: 18px;
+    }
+
+    .photo-card {
+      position: relative;
+      min-height: 260px;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--pine);
+      box-shadow: 0 16px 46px rgba(18, 63, 43, 0.1);
+    }
+
+    .photo-card.large {
+      grid-row: span 2;
+      min-height: 538px;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 260ms ease;
+    }
+
+    .photo-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(16, 35, 25, 0.02), rgba(16, 35, 25, 0.68));
+      pointer-events: none;
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.035);
+    }
+
+    .photo-caption {
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      left: 18px;
+      z-index: 1;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.18rem;
+      line-height: 1.12;
+      text-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .pricing-head,
+    .tournaments-head,
+    .services-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 34px;
+    }
+
+    .tabs {
+      display: inline-flex;
+      gap: 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px;
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .tab {
+      min-height: 40px;
+      border: 0;
+      border-radius: 999px;
+      padding: 0 16px;
+      background: transparent;
+      color: var(--pine);
+      cursor: pointer;
+      font-weight: 850;
+    }
+
+    .tab.is-active {
+      background: var(--pine);
+      color: var(--white);
+    }
+
+    .price-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .price-panel {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 16px 46px rgba(18, 63, 43, 0.08);
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .price-table th,
+    .price-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(18, 63, 43, 0.1);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .price-table th {
+      background: #f3eadc;
+      color: var(--earth);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .price-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .price-table td:last-child,
+    .price-table th:last-child {
+      width: 135px;
+      text-align: right;
+    }
+
+    .price-value {
+      color: var(--pine);
+      font-size: 1.3rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .price-aside {
+      border-radius: var(--radius);
+      padding: 26px;
+      background: var(--pine);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .price-aside h3 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+
+    .price-aside p {
+      margin: 0 0 18px;
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .price-aside small {
+      display: block;
+      margin-top: 16px;
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .event-card,
+    .service-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 14px 42px rgba(18, 63, 43, 0.08);
+    }
+
+    .event-card {
+      display: grid;
+      min-height: 330px;
+      grid-template-rows: auto 1fr;
+      padding: 0;
+    }
+
+    .event-date {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      background: var(--pine);
+      color: var(--white);
+    }
+
+    .event-date strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      font-weight: 500;
+    }
+
+    .event-date span {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.77rem;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .event-card-body {
+      display: grid;
+      align-content: space-between;
+      gap: 22px;
+      padding: 22px;
+    }
+
+    .event-card h3,
+    .service-card h3 {
+      margin: 0;
+      color: var(--pine);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      font-weight: 500;
+      line-height: 1.12;
+    }
+
+    .event-card p,
+    .service-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .card-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .mini-link {
+      display: inline-flex;
+      min-height: 38px;
+      align-items: center;
+      border: 1px solid rgba(18, 63, 43, 0.16);
+      border-radius: 999px;
+      padding: 0 13px;
+      color: var(--pine);
+      font-size: 0.86rem;
+      font-weight: 850;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 235px;
+      object-fit: cover;
+    }
+
+    .service-card-body {
+      padding: 24px;
+    }
+
+    .service-card.featured {
+      display: grid;
+      grid-template-columns: 0.92fr 1fr;
+      grid-column: span 2;
+    }
+
+    .service-card.featured img {
+      height: 100%;
+      min-height: 310px;
+    }
+
+    .restaurant-reservation {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(320px, 0.58fr);
+      gap: 24px;
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      background:
+        linear-gradient(120deg, rgba(18, 63, 43, 0.95), rgba(31, 92, 63, 0.88)),
+        url("https://montealvar.com/wp-content/uploads/2020/10/instalaciones-restaurante-new.png") center / cover no-repeat;
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .reservation-copy {
+      display: grid;
+      align-content: space-between;
+      gap: 22px;
+      min-height: 100%;
+    }
+
+    .reservation-logo {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.94);
+      object-fit: contain;
+    }
+
+    .restaurant-reservation h3 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1.06;
+    }
+
+    .restaurant-reservation p {
+      max-width: 580px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .reservation-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .reservation-points span {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.09);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .reservation-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: var(--radius);
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(16px);
+    }
+
+    .reservation-form .wide {
+      grid-column: 1 / -1;
+    }
+
+    .reservation-form label {
+      display: block;
+      margin-bottom: 6px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.74rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .reservation-form input,
+    .reservation-form select,
+    .reservation-form textarea {
+      width: 100%;
+      min-height: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: var(--radius);
+      padding: 0 12px;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.12);
+      outline: none;
+    }
+
+    .reservation-form textarea {
+      min-height: 84px;
+      padding-top: 12px;
+      resize: vertical;
+    }
+
+    .reservation-form input::placeholder,
+    .reservation-form textarea::placeholder {
+      color: rgba(255, 255, 255, 0.58);
+    }
+
+    .reservation-form select option {
+      color: var(--ink);
+    }
+
+    .reservation-form .btn {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+
+    .contact-band {
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0;
+      background:
+        linear-gradient(90deg, rgba(18, 63, 43, 0.94), rgba(18, 63, 43, 0.78)),
+        url("https://montealvar.com/wp-content/uploads/2020/10/instalaciones-eventos-new.png") center / cover no-repeat;
+      color: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.86fr) minmax(320px, 0.54fr);
+      gap: 46px;
+      align-items: center;
+    }
+
+    .contact-band .section-title {
+      color: var(--white);
+    }
+
+    .contact-band .section-lead {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .contact-list a {
+      color: var(--white);
+      font-weight: 850;
+    }
+
+    .booking-form {
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: var(--radius);
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+    }
+
+    .booking-form label {
+      display: block;
+      margin-bottom: 6px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.76rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .booking-form input,
+    .booking-form select {
+      width: 100%;
+      min-height: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: var(--radius);
+      margin-bottom: 14px;
+      padding: 0 13px;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.12);
+      outline: none;
+    }
+
+    .booking-form select option {
+      color: var(--ink);
+    }
+
+    .booking-form input::placeholder {
+      color: rgba(255, 255, 255, 0.58);
+    }
+
+    .booking-form .btn {
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .site-footer {
+      background: #102319;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.7fr 0.9fr;
+      gap: 34px;
+      padding: 54px 0;
+    }
+
+    .footer-grid h3 {
+      margin: 0 0 14px;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+    }
+
+    .footer-grid p {
+      margin: 0;
+    }
+
+    .footer-brand-logo {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      padding: 9px;
+      background: rgba(255, 255, 255, 0.92);
+      object-fit: contain;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .newsletter {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .newsletter input {
+      min-width: 0;
+      flex: 1;
+      min-height: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      padding: 0 16px;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+      outline: none;
+    }
+
+    .newsletter input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 20px 0 24px;
+      color: rgba(255, 255, 255, 0.56);
+      font-size: 0.88rem;
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 40;
+      max-width: 340px;
+      transform: translateY(18px);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      background: var(--pine);
+      color: var(--white);
+      box-shadow: var(--shadow);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .toast.is-visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 1060px) {
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .nav {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        left: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 10px;
+        background: rgba(247, 242, 232, 0.98);
+        box-shadow: var(--shadow);
+      }
+
+      .nav.is-open {
+        display: flex;
+      }
+
+      .nav a {
+        color: var(--pine);
+      }
+
+      .nav a:hover,
+      .nav a.is-active {
+        background: rgba(18, 63, 43, 0.08);
+        color: var(--pine);
+      }
+
+      .nav-cta {
+        margin: 8px 0 0;
+      }
+
+      .nav-cta .btn {
+        width: 100%;
+      }
+
+      .hero-content,
+      .field-layout,
+      .price-layout,
+      .restaurant-reservation,
+      .contact-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        max-width: 520px;
+      }
+
+      .quick-strip .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quick-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .quick-item:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .photo-gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .photo-card.large {
+        grid-column: span 2;
+        min-height: 420px;
+      }
+
+      .service-card.featured {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      .nav-wrap {
+        min-height: 70px;
+      }
+
+      .brand-meta {
+        display: none;
+      }
+
+      .hero {
+        min-height: 760px;
+      }
+
+      .hero-content {
+        padding: 116px 0 92px;
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .quick-strip {
+        margin-top: -36px;
+      }
+
+      .quick-strip .container,
+      .stat-grid,
+      .cards-grid,
+      .photo-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-card,
+      .photo-card.large {
+        grid-column: span 1;
+        grid-row: auto;
+        min-height: 280px;
+      }
+
+      .quick-item,
+      .quick-item:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .quick-item:last-child {
+        border-bottom: 0;
+      }
+
+      .section {
+        padding: 74px 0;
+      }
+
+      .pricing-head,
+      .tournaments-head,
+      .services-head {
+        display: grid;
+        gap: 18px;
+      }
+
+      .tabs {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      .tab {
+        flex: 1;
+      }
+
+      .price-table,
+      .price-table tbody,
+      .price-table tr,
+      .price-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .price-table thead {
+        display: none;
+      }
+
+      .price-table tr {
+        border-bottom: 1px solid rgba(18, 63, 43, 0.1);
+      }
+
+      .price-table tr:last-child {
+        border-bottom: 0;
+      }
+
+      .price-table td {
+        border-bottom: 0;
+        padding: 16px 18px 4px;
+      }
+
+      .price-table td:last-child {
+        width: 100%;
+        padding-top: 4px;
+        padding-bottom: 18px;
+        text-align: left;
+      }
+
+      .service-card.featured {
+        grid-template-columns: 1fr;
+        grid-column: span 1;
+      }
+
+      .reservation-form {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card.featured img,
+      .service-card img,
+      .image-stack img {
+        height: 260px;
+        min-height: auto;
+      }
+
+      .newsletter,
+      .footer-bottom {
+        display: grid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" data-header>
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Montealvar Club de Golf">
+        <img class="brand-logo" src="https://montealvar.com/wp-content/uploads/2022/05/LOGO-VERTICAL2b-1022x1024.png" alt="Logo Montealvar">
+        <span>
+          <span class="brand-name">Montealvar</span>
+          <span class="brand-meta">Club de Golf</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" data-nav aria-label="Navegación principal">
+        <a href="#campo">El Campo</a>
+        <a href="#tarifas">Tarifas</a>
+        <a href="#torneos">Torneos</a>
+        <a href="#restaurante">Restaurante</a>
+        <a href="montealvar-bodas.html">Bodas/Eventos</a>
+        <a href="#contacto">Contacto</a>
+        <span class="nav-cta">
+          <a class="btn btn-primary" href="https://open.teeone.golf/" target="_blank" rel="noreferrer">Reservar Green Fee</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-label="Montealvar Club de Golf">
+      <div class="container hero-content">
+        <div>
+          <img class="hero-logo" src="https://montealvar.com/wp-content/uploads/2022/05/LOGO-VERTICAL2b-1022x1024.png" alt="Logo Montealvar">
+          <span class="eyebrow">Guadalajara · Bosque de Valdenazar</span>
+          <h1>Bienvenido a Montealvar Club de Golf</h1>
+          <p class="hero-copy">Un recorrido concebido para la diversión y disfrute de todo tipo de jugador: rápido de jugar, agradecido con el jugador y rodeado de naturaleza.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://open.teeone.golf/" target="_blank" rel="noreferrer">Reservar Green Fee</a>
+            <a class="btn btn-secondary" href="#tarifas">Ver tarifas</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Datos destacados">
+          <dl>
+            <div>
+              <dt>Recorrido</dt>
+              <dd>18 hoyos · Par 72</dd>
+            </div>
+            <div>
+              <dt>Diseño</dt>
+              <dd>Ramón Espinosa</dd>
+            </div>
+            <div>
+              <dt>Horario</dt>
+              <dd>Abierto hasta las 21:00</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <div class="quick-strip" aria-label="Resumen del club">
+      <div class="container">
+        <div class="quick-item">
+          <span>Ubicación</span>
+          <strong>Monasterio de Alcohete</strong>
+        </div>
+        <div class="quick-item">
+          <span>Entorno</span>
+          <strong>Bosque de Valdenazar</strong>
+        </div>
+        <div class="quick-item">
+          <span>Contacto</span>
+          <strong>949 100 233</strong>
+        </div>
+        <div class="quick-item">
+          <span>Experiencia</span>
+          <strong>Golf, restaurante y eventos</strong>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="campo">
+      <div class="container field-layout">
+        <div class="field-copy">
+          <span class="eyebrow">El Campo</span>
+          <h2 class="section-title">Naturaleza, amplitud y un recorrido amable para disfrutar.</h2>
+          <p>Montealvar discurre en un terreno bastante plano, con vaguadas, caminos, puentes y árboles que conviven con encinas centenarias. Sus calles anchas, rough generoso y greenes amplios favorecen una vuelta fluida sin renunciar al desafío.</p>
+          <p>El Bosque de Valdenazar marca los límites del campo y aporta carácter en los hoyos de mayor distancia, con un barranco que entra en juego en cuatro hoyos.</p>
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>6</strong>
+              <span>barras de salida para distintos niveles de juego</span>
+            </div>
+            <div class="stat">
+              <strong>3</strong>
+              <span>lagos artificiales que acompañan el recorrido</span>
+            </div>
+            <div class="stat">
+              <strong>30'</strong>
+              <span>aproximadamente desde Madrid</span>
+            </div>
+          </div>
+        </div>
+        <div class="image-stack">
+          <figure>
+            <img src="https://montealvar.com/wp-content/uploads/2020/06/instalaciones-campo-brillo.png" alt="Campo de golf de Montealvar">
+          </figure>
+          <div class="mini-note">Campo rápido de jugar, pensado para que el jugador se concentre en el juego y en el paisaje.</div>
+        </div>
+      </div>
+      <div class="container gallery-block">
+        <span class="eyebrow">Galería</span>
+        <h2 class="section-title">El club en imágenes.</h2>
+        <p class="section-lead">Una muestra visual del campo, la casa club, el restaurante y los espacios de celebración para que la experiencia se entienda antes de llegar.</p>
+        <div class="photo-gallery" aria-label="Galería de Montealvar">
+          <figure class="photo-card large">
+            <img src="https://montealvar.com/wp-content/uploads/2020/07/0014_Golf-Valdeluz_0028.jpg" alt="Vista del campo de golf de Montealvar" loading="lazy">
+            <figcaption class="photo-caption">Calles amplias en el entorno de Valdenazar</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="https://montealvar.com/wp-content/uploads/2020/07/0033_Golf-Valdeluz_0075.jpg" alt="Green y paisaje natural de Montealvar" loading="lazy">
+            <figcaption class="photo-caption">Greenes amplios y paisaje abierto</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="https://montealvar.com/wp-content/uploads/2020/07/0149_Golf-Valdeluz_0551.jpg" alt="Casa club y campo de Montealvar" loading="lazy">
+            <figcaption class="photo-caption">Casa club con vistas al recorrido</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="https://montealvar.com/wp-content/uploads/2020/10/instalaciones-restaurante-new.png" alt="Restaurante Montealvar" loading="lazy">
+            <figcaption class="photo-caption">Restaurante y hoyo 19</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="https://montealvar.com/wp-content/uploads/2020/10/instalaciones-eventos-new.png" alt="Zona de eventos de Montealvar" loading="lazy">
+            <figcaption class="photo-caption">Terraza y eventos en la finca</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="tarifas">
+      <div class="container">
+        <div class="pricing-head">
+          <div>
+            <span class="eyebrow">Abonos y Tarifas</span>
+            <h2 class="section-title">Precios claros para jugar a tu ritmo.</h2>
+            <p class="section-lead">Selección de tarifas principales para externos, abonados y bonos. Los importes pueden conectarse a un CMS o a una hoja interna para mantenerlos al día.</p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Tipos de tarifas">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="externos">Externos</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="abonados">Abonados</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="bonos">Bonos</button>
+          </div>
+        </div>
+        <div class="price-layout">
+          <div class="price-panel" aria-live="polite">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Concepto</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody data-prices></tbody>
+            </table>
+          </div>
+          <aside class="price-aside">
+            <h3>Reserva tu salida</h3>
+            <p>Elige tu tarifa, confirma disponibilidad y prepara una vuelta cómoda en un campo agradecido con todos los niveles.</p>
+            <a class="btn btn-primary" href="https://open.teeone.golf/" target="_blank" rel="noreferrer">Reservar Green Fee</a>
+            <small>*Festivos nacionales y de la Comunidad de Madrid. Tarifas editables según temporada.</small>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="torneos">
+      <div class="container">
+        <div class="tournaments-head">
+          <div>
+            <span class="eyebrow">Torneos y Resultados</span>
+            <h2 class="section-title">Calendario, salidas y clasificaciones a mano.</h2>
+            <p class="section-lead">Un bloque dinámico para destacar torneos próximos y enlazar horarios de salida, normas y resultados sin saturar la portada.</p>
+          </div>
+          <a class="btn btn-outline" href="https://montealvar.com/horarios-y-resultados/" target="_blank" rel="noreferrer">Horarios y resultados</a>
+        </div>
+        <div class="cards-grid" data-events></div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="restaurante">
+      <div class="container">
+        <div class="services-head">
+          <div>
+            <span class="eyebrow">Servicios Extra</span>
+            <h2 class="section-title">El hoyo 19 también forma parte de la experiencia.</h2>
+            <p class="section-lead">Restaurante, terraza, celebraciones y espacios para empresas en un entorno natural con vistas al campo.</p>
+          </div>
+        </div>
+        <div class="cards-grid">
+          <article class="service-card featured">
+            <img src="https://montealvar.com/wp-content/uploads/2020/10/instalaciones-restaurante-new.png" alt="Restaurante de Montealvar">
+            <div class="service-card-body">
+              <h3>Restaurante Montealvar</h3>
+              <p>Cocina cuidada, ambiente relajado y vistas al campo de golf para comidas después de la vuelta, encuentros familiares o planes de fin de semana.</p>
+              <div class="card-links" style="margin-top: 20px;">
+                <a class="mini-link" href="https://montealvar.com/menu/" target="_blank" rel="noreferrer">Ver menú</a>
+                <a class="mini-link" href="mailto:restaurante@montealvar.com">Reservar mesa</a>
+              </div>
+            </div>
+          </article>
+          <article class="service-card" id="eventos">
+            <img src="https://montealvar.com/wp-content/uploads/2020/10/instalaciones-eventos-new.png" alt="Eventos y celebraciones en Montealvar">
+            <div class="service-card-body">
+              <h3>Bodas y eventos</h3>
+              <p>Una finca en pleno corazón del bosque de Valdenazar con jardines, terraza y espacios rehabilitados para celebraciones en la naturaleza.</p>
+              <div class="card-links" style="margin-top: 20px;">
+                <a class="mini-link" href="montealvar-bodas.html">Bodas</a>
+                <a class="mini-link" href="https://montealvar.com/corporativo/" target="_blank" rel="noreferrer">Corporativo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="restaurant-reservation" aria-label="Reserva de restaurante">
+          <div class="reservation-copy">
+            <div>
+              <img class="reservation-logo" src="https://montealvar.com/wp-content/uploads/2022/05/LOGO-VERTICAL2b-1022x1024.png" alt="Logo Montealvar">
+              <h3>Reserva mesa en el restaurante</h3>
+              <p>El formulario prepara una solicitud directa al restaurante con fecha, hora, número de comensales y datos de contacto para que el equipo confirme la disponibilidad.</p>
+            </div>
+            <div class="reservation-points" aria-label="Opciones de reserva">
+              <span>Desayunos</span>
+              <span>Comidas</span>
+              <span>Terraza</span>
+              <span>Grupos</span>
+            </div>
+          </div>
+          <form class="reservation-form" data-restaurant-reservation>
+            <div>
+              <label for="restaurant-date">Fecha</label>
+              <input id="restaurant-date" name="date" type="date" required>
+            </div>
+            <div>
+              <label for="restaurant-time">Hora</label>
+              <select id="restaurant-time" name="time" required>
+                <option value="">Selecciona hora</option>
+                <option>08:30</option>
+                <option>09:30</option>
+                <option>10:30</option>
+                <option>13:30</option>
+                <option>14:30</option>
+                <option>15:30</option>
+                <option>20:00</option>
+              </select>
+            </div>
+            <div>
+              <label for="restaurant-guests">Comensales</label>
+              <select id="restaurant-guests" name="guests" required>
+                <option value="">Personas</option>
+                <option>1 persona</option>
+                <option>2 personas</option>
+                <option>3 personas</option>
+                <option>4 personas</option>
+                <option>5 personas</option>
+                <option>6 personas</option>
+                <option>Grupo de 7 o más</option>
+              </select>
+            </div>
+            <div>
+              <label for="restaurant-zone">Zona</label>
+              <select id="restaurant-zone" name="zone" required>
+                <option value="">Preferencia</option>
+                <option>Salón interior</option>
+                <option>Terraza</option>
+                <option>Indiferente</option>
+              </select>
+            </div>
+            <div>
+              <label for="restaurant-name">Nombre</label>
+              <input id="restaurant-name" name="name" autocomplete="name" placeholder="Tu nombre" required>
+            </div>
+            <div>
+              <label for="restaurant-phone">Teléfono</label>
+              <input id="restaurant-phone" name="phone" type="tel" autocomplete="tel" placeholder="Teléfono" required>
+            </div>
+            <div class="wide">
+              <label for="restaurant-email">Email</label>
+              <input id="restaurant-email" name="email" type="email" autocomplete="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="wide">
+              <label for="restaurant-notes">Notas</label>
+              <textarea id="restaurant-notes" name="notes" placeholder="Alergias, trona, ocasión especial..."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Solicitar reserva</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contacto">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow">Contacto</span>
+          <h2 class="section-title">Planifica tu próxima vuelta en Montealvar.</h2>
+          <p class="section-lead">Reserva green fee, consulta disponibilidad para eventos o habla con el club para resolver cualquier duda antes de venir.</p>
+          <div class="contact-list">
+            <div><strong>Teléfono:</strong> <a href="tel:+34949100233">949 100 233</a></div>
+            <div><strong>Email:</strong> <a href="mailto:informacion@montealvar.com">informacion@montealvar.com</a></div>
+            <div><strong>Dirección:</strong> Monasterio de Alcohete, s/n, 19141 Yebes, Guadalajara</div>
+            <div><a href="https://www.google.com/maps/search/?api=1&query=Montealvar%20Club%20de%20Golf" target="_blank" rel="noreferrer">Abrir en Google Maps</a></div>
+          </div>
+        </div>
+        <form class="booking-form" data-contact-form>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" autocomplete="name" placeholder="Tu nombre" required>
+          <label for="interest">Interés</label>
+          <select id="interest" name="interest" required>
+            <option value="">Selecciona una opción</option>
+            <option>Reserva green fee</option>
+            <option>Abonos y bonos</option>
+            <option>Bodas y eventos</option>
+            <option>Restaurante</option>
+          </select>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="tu@email.com" required>
+          <button class="btn btn-primary" type="submit">Solicitar información</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-brand-logo" src="https://montealvar.com/wp-content/uploads/2022/05/LOGO-VERTICAL2b-1022x1024.png" alt="Logo Montealvar">
+        <h3>Montealvar Club de Golf</h3>
+        <p>Golf, naturaleza, restaurante y eventos en el entorno del Monasterio de Alcohete y el bosque de Valdenazar.</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <div class="footer-links">
+          <a href="tel:+34949100233">949 100 233</a>
+          <a href="mailto:informacion@montealvar.com">informacion@montealvar.com</a>
+          <a href="mailto:restaurante@montealvar.com">restaurante@montealvar.com</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Montealvar%20Club%20de%20Golf" target="_blank" rel="noreferrer">Google Maps</a>
+        </div>
+      </div>
+      <div>
+        <h3>Newsletter</h3>
+        <p>Recibe torneos, tarifas especiales y novedades del club.</p>
+        <form class="newsletter" data-newsletter-form>
+          <input type="email" name="newsletter" placeholder="Email" aria-label="Email newsletter" required>
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© Montealvar Club de Golf</span>
+      <span><a href="https://montealvar.com/aviso-legal/" target="_blank" rel="noreferrer">Aviso legal</a> · <a href="https://montealvar.com/politica-de-privacidad/" target="_blank" rel="noreferrer">Política de privacidad</a></span>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GolfCourse",
+      "name": "Montealvar Club de Golf",
+      "url": "https://montealvar.com/",
+      "telephone": "+34 949 100 233",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Monasterio de Alcohete, s/n",
+        "addressLocality": "Yebes",
+        "addressRegion": "Guadalajara",
+        "postalCode": "19141",
+        "addressCountry": "ES"
+      }
+    }
+  </script>
+
+  <script>
+    const RESTAURANT_EMAIL = "restaurante@montealvar.com";
+    const priceData = {
+      externos: [
+        ["Greenfee 18 hoyos fin de semana/festivos", "58€"],
+        ["Greenfee 18 hoyos laborable", "40€"],
+        ["Greenfee 9 hoyos fin de semana/festivos", "34€"],
+        ["Greenfee 9 hoyos laborable", "26€"],
+        ["Greenfee bienvenida de lunes a viernes no festivos", "30€"],
+        ["Greenfee Senior +55 / menores de 35", "35€"]
+      ],
+      abonados: [
+        ["Greenfee 18 hoyos", "6,50€"],
+        ["Greenfee torneo", "13€ - 31€"],
+        ["Buggie 18 hoyos laborable", "26€"],
+        ["Buggie 18 hoyos fin de semana/festivos", "29€"],
+        ["Carro eléctrico", "9€"],
+        ["Carro manual", "Sin coste"]
+      ],
+      bonos: [
+        ["Abono 10 por usos", "280€"],
+        ["Abono 20 por usos", "560€"],
+        ["Abono laborable anual", "630€"],
+        ["Bono 10 buggies laborable", "230€"],
+        ["Bono anual carro eléctrico laborable", "170€"],
+        ["Bono anual carro eléctrico L-D y festivos", "265€"]
+      ]
+    };
+
+    const events = [
+      {
+        date: "19 Abr",
+        label: "Torneo abierto",
+        title: "Torneo Roll&Golf",
+        text: "Competición de primavera en Montealvar con salidas publicadas en el área de torneos.",
+        links: [
+          ["Inscripción", "https://montealvar.com/torneos/"],
+          ["Salidas", "https://montealvar.com/horarios-y-resultados/"]
+        ]
+      },
+      {
+        date: "24 Abr",
+        label: "Casual Friday",
+        title: "Torneo Casual Friday",
+        text: "Formato pensado para cerrar la semana con golf, ambiente social y una vuelta rápida.",
+        links: [
+          ["Calendario", "https://montealvar.com/torneos/"],
+          ["Resultados", "https://montealvar.com/horarios-y-resultados/"]
+        ]
+      },
+      {
+        date: "2026",
+        label: "Liga",
+        title: "I Liga Senior Ciudad de Guadalajara",
+        text: "Espacio destacado para anunciar ligas, horarios de salida y clasificaciones acumuladas.",
+        links: [
+          ["Normas", "https://montealvar.com/torneos/"],
+          ["Clasificación", "https://montealvar.com/horarios-y-resultados/"]
+        ]
+      }
+    ];
+
+    const header = document.querySelector("[data-header]");
+    const nav = document.querySelector("[data-nav]");
+    const menuToggle = document.querySelector("[data-menu-toggle]");
+    const priceBody = document.querySelector("[data-prices]");
+    const tabButtons = document.querySelectorAll("[data-tab]");
+    const eventGrid = document.querySelector("[data-events]");
+    const toast = document.querySelector("[data-toast]");
+    const contactForm = document.querySelector("[data-contact-form]");
+    const newsletterForm = document.querySelector("[data-newsletter-form]");
+    const restaurantReservationForm = document.querySelector("[data-restaurant-reservation]");
+
+    function updateHeader() {
+      header.classList.toggle("is-scrolled", window.scrollY > 24);
+    }
+
+    function renderPrices(type) {
+      priceBody.innerHTML = priceData[type]
+        .map(([concept, price]) => `
+          <tr>
+            <td>${concept}</td>
+            <td><span class="price-value">${price}</span></td>
+          </tr>
+        `)
+        .join("");
+    }
+
+    function renderEvents() {
+      eventGrid.innerHTML = events
+        .map(event => `
+          <article class="event-card">
+            <div class="event-date">
+              <strong>${event.date}</strong>
+              <span>${event.label}</span>
+            </div>
+            <div class="event-card-body">
+              <div>
+                <h3>${event.title}</h3>
+                <p>${event.text}</p>
+              </div>
+              <div class="card-links">
+                ${event.links.map(([label, url]) => `<a class="mini-link" href="${url}" target="_blank" rel="noreferrer">${label}</a>`).join("")}
+              </div>
+            </div>
+          </article>
+        `)
+        .join("");
+    }
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      window.setTimeout(() => toast.classList.remove("is-visible"), 3400);
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("is-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    nav.addEventListener("click", event => {
+      if (event.target.closest("a")) {
+        nav.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        tabButtons.forEach(tab => {
+          tab.classList.toggle("is-active", tab === button);
+          tab.setAttribute("aria-selected", String(tab === button));
+        });
+        renderPrices(button.dataset.tab);
+      });
+    });
+
+    function bindSimpleForm(form, message) {
+      if (!form) return;
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        form.reset();
+        showToast(message);
+      });
+    }
+
+    function setupRestaurantReservation() {
+      if (!restaurantReservationForm) return;
+      const dateInput = restaurantReservationForm.querySelector("#restaurant-date");
+      if (dateInput) {
+        dateInput.min = new Date().toISOString().split("T")[0];
+      }
+
+      restaurantReservationForm.addEventListener("submit", event => {
+        event.preventDefault();
+        const data = Object.fromEntries(new FormData(restaurantReservationForm).entries());
+        const reservation = {
+          ...data,
+          createdAt: new Date().toISOString()
+        };
+        const saved = JSON.parse(localStorage.getItem("montealvarRestaurantReservations") || "[]");
+        saved.push(reservation);
+        localStorage.setItem("montealvarRestaurantReservations", JSON.stringify(saved));
+
+        const subject = `Reserva restaurante Montealvar - ${data.date} ${data.time}`;
+        const body = [
+          "Solicitud de reserva de restaurante",
+          "",
+          `Nombre: ${data.name}`,
+          `Telefono: ${data.phone}`,
+          `Email: ${data.email}`,
+          `Fecha: ${data.date}`,
+          `Hora: ${data.time}`,
+          `Comensales: ${data.guests}`,
+          `Zona preferida: ${data.zone}`,
+          `Notas: ${data.notes || "Sin notas"}`
+        ].join("\n");
+        const mailto = `mailto:${RESTAURANT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+        restaurantReservationForm.reset();
+        showToast("Reserva preparada. Confirma el envío en tu gestor de correo.");
+      });
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const active = document.querySelector(`.nav a[href="#${entry.target.id}"]`);
+        if (!active) return;
+        document.querySelectorAll(".nav a").forEach(link => link.classList.remove("is-active"));
+        active.classList.add("is-active");
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+
+    document.querySelectorAll("main section[id]").forEach(section => observer.observe(section));
+
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    updateHeader();
+    renderPrices("externos");
+    renderEvents();
+    bindSimpleForm(contactForm, "Gracias. Hemos recibido tu solicitud de contacto.");
+    bindSimpleForm(newsletterForm, "Gracias. Te hemos apuntado a la newsletter.");
+    setupRestaurantReservation();
+  </script>
+</body>
+</html>

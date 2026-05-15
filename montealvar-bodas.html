@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bodas en Montealvar | Finca en el bosque de Valdenazar</title>
+  <meta name="description" content="Celebra tu boda en Montealvar: jardines, terraza, monasterio del siglo XVI y vistas al campo de golf. Solicita presupuesto en el perfil oficial de Bodas.net.">
+  <meta property="og:title" content="Bodas en Montealvar">
+  <meta property="og:description" content="Una finca natural y elegante para bodas en Guadalajara.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.bodas.net/fincas/montealvar--e30637">
+  <meta property="og:image" content="https://montealvar.com/wp-content/uploads/2020/10/instalaciones-eventos-new.png">
+  <style>
+    :root {
+      --pine: #123f2b;
+      --pine-2: #1f5c3f;
+      --gold: #c69b4f;
+      --cream: #f7f2e8;
+      --white: #ffffff;
+      --ink: #17231e;
+      --muted: #69766f;
+      --line: rgba(18, 63, 43, 0.16);
+      --shadow: 0 24px 70px rgba(16, 39, 29, 0.16);
+      --radius: 8px;
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 0 22px;
+      cursor: pointer;
+      font-weight: 850;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #241706;
+      box-shadow: 0 16px 32px rgba(198, 155, 79, 0.28);
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, 0.46);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      z-index: 20;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(10, 28, 19, 0.38);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-wrap {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+    }
+
+    .brand-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 6px;
+      background: rgba(255, 255, 255, 0.94);
+      object-fit: contain;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
+    }
+
+    .brand-text {
+      display: block;
+    }
+
+    .brand strong {
+      display: block;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.18rem;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .brand-meta {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      align-items: end;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(10, 28, 19, 0.86), rgba(10, 28, 19, 0.45) 50%, rgba(10, 28, 19, 0.18)),
+        linear-gradient(0deg, rgba(10, 28, 19, 0.66), rgba(10, 28, 19, 0.06) 54%),
+        url("https://montealvar.com/wp-content/uploads/2020/10/instalaciones-eventos-new.png") center / cover no-repeat;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: minmax(0, 0.84fr) minmax(310px, 0.42fr);
+      gap: 50px;
+      align-items: end;
+      padding: 148px 0 88px;
+    }
+
+    .hero-logo {
+      width: clamp(92px, 12vw, 148px);
+      border-radius: 50%;
+      margin-bottom: 22px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+    }
+
+    h1 {
+      max-width: 840px;
+      margin: 18px 0 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 7vw, 6.2rem);
+      font-weight: 500;
+      line-height: 0.96;
+      text-wrap: balance;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 0 30px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: clamp(1.06rem, 2.2vw, 1.28rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .trust-card {
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: var(--radius);
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(16px);
+    }
+
+    .trust-card h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    .trust-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .trust-item {
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      padding-top: 12px;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--white);
+      font-size: 1.3rem;
+      line-height: 1.1;
+    }
+
+    .trust-item span {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.88rem;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-title {
+      margin: 14px 0 12px;
+      color: var(--pine);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      font-weight: 500;
+      line-height: 1.06;
+    }
+
+    .section-lead {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 34px;
+    }
+
+    .experience-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      background: var(--white);
+      box-shadow: 0 14px 42px rgba(18, 63, 43, 0.08);
+    }
+
+    .experience-card h3 {
+      margin: 0 0 10px;
+      color: var(--pine);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .experience-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr 0.88fr;
+      gap: 20px;
+      margin-top: 34px;
+    }
+
+    .gallery figure {
+      position: relative;
+      min-height: 250px;
+      margin: 0;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--pine);
+      box-shadow: var(--shadow);
+    }
+
+    .gallery figure.large {
+      grid-row: span 2;
+      min-height: 520px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 260ms ease;
+    }
+
+    .gallery figure::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(16, 35, 25, 0), rgba(16, 35, 25, 0.72));
+      pointer-events: none;
+    }
+
+    .gallery figure:hover img {
+      transform: scale(1.035);
+    }
+
+    .gallery figcaption {
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      left: 18px;
+      z-index: 1;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.16rem;
+      line-height: 1.12;
+      text-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .redirect-band {
+      background: var(--pine);
+      color: var(--white);
+    }
+
+    .redirect-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(300px, 0.42fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .redirect-band .section-title {
+      color: var(--white);
+    }
+
+    .redirect-band .section-lead {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .quote-form {
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+    }
+
+    .quote-form label {
+      display: block;
+      margin-bottom: 6px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.74rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .quote-form input,
+    .quote-form select {
+      width: 100%;
+      min-height: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: var(--radius);
+      margin-bottom: 14px;
+      padding: 0 12px;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.12);
+      outline: none;
+    }
+
+    .quote-form select option {
+      color: var(--ink);
+    }
+
+    .quote-form .btn {
+      width: 100%;
+    }
+
+    .site-footer {
+      background: #102319;
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 34px 0;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-brand img {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      padding: 7px;
+      background: rgba(255, 255, 255, 0.92);
+      object-fit: contain;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 40;
+      max-width: 340px;
+      transform: translateY(18px);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      background: var(--pine);
+      color: var(--white);
+      box-shadow: var(--shadow);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .toast.is-visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 920px) {
+      .hero-content,
+      .redirect-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery figure.large {
+        grid-column: span 2;
+        grid-row: auto;
+        min-height: 380px;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      .nav-wrap,
+      .footer-wrap {
+        display: grid;
+      }
+
+      .nav-actions,
+      .hero-actions,
+      .footer-links {
+        display: grid;
+        justify-content: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-content {
+        padding-top: 128px;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery,
+      .hero-content,
+      .redirect-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery figure,
+      .gallery figure.large {
+        grid-column: span 1;
+        grid-row: auto;
+        height: 280px;
+        min-height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="montealvar-landing.html" aria-label="Volver a Montealvar Club de Golf">
+        <img class="brand-logo" src="https://montealvar.com/wp-content/uploads/2022/05/LOGO-VERTICAL2b-1022x1024.png" alt="Logo Montealvar">
+        <span class="brand-text">
+          <strong>Montealvar</strong>
+          <span class="brand-meta">Bodas y eventos</span>
+        </span>
+      </a>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="montealvar-landing.html">Volver al club</a>
+        <a class="btn btn-primary" href="https://www.bodas.net/fincas/montealvar--e30637" target="_blank" rel="noreferrer">Bodas.net</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <img class="hero-logo" src="https://montealvar.com/wp-content/uploads/2022/05/LOGO-VERTICAL2b-1022x1024.png" alt="Logo Montealvar">
+          <span class="eyebrow">Finca Montealvar · Guadalajara</span>
+          <h1>Una boda en plena naturaleza, con alma de club.</h1>
+          <p>Jardines, terraza acristalada, vistas al campo de golf y el entorno del Monasterio de Alcohete para una celebración íntima, elegante y bien acompañada.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://www.bodas.net/fincas/montealvar--e30637" target="_blank" rel="noreferrer">Solicitar presupuesto en Bodas.net</a>
+            <a class="btn btn-outline" href="#espacios">Ver espacios</a>
+          </div>
+        </div>
+        <aside class="trust-card" aria-label="Datos de Bodas.net">
+          <h2>Perfil oficial</h2>
+          <div class="trust-grid">
+            <div class="trust-item">
+              <strong>5.0/5</strong>
+              <span>valoración en Bodas.net</span>
+            </div>
+            <div class="trust-item">
+              <strong>76 opiniones</strong>
+              <span>parejas que recomiendan Montealvar</span>
+            </div>
+            <div class="trust-item">
+              <strong>80 a 240</strong>
+              <span>invitados orientativos</span>
+            </div>
+            <div class="trust-item">
+              <strong>Desde 132€</strong>
+              <span>menús publicados en Bodas.net</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="espacios">
+      <div class="container">
+        <span class="eyebrow">Espacios</span>
+        <h2 class="section-title">Ceremonia, cocktail, cena y fiesta en un mismo lugar.</h2>
+        <p class="section-lead">Montealvar combina espacios exteriores e interiores: jardines, terraza, salones luminosos, zona de baile, parking y la posibilidad de ceremonia civil en el monasterio del siglo XVI o en el propio campo de golf.</p>
+        <div class="experience-grid">
+          <article class="experience-card">
+            <h3>Jardines y terraza</h3>
+            <p>Vistas al campo, atardeceres y zonas al aire libre para cocktail, cena o momentos tranquilos con los invitados.</p>
+          </article>
+          <article class="experience-card">
+            <h3>Un solo evento al día</h3>
+            <p>Una experiencia más privada, con el equipo centrado en vuestra celebración y en los tiempos de cada momento.</p>
+          </article>
+          <article class="experience-card">
+            <h3>Cocina propia</h3>
+            <p>Banquete de mercado con opciones para adaptar menús y cuidar alergias, intolerancias o necesidades especiales.</p>
+          </article>
+        </div>
+        <div class="gallery" aria-label="Galería de bodas">
+          <figure class="large">
+            <img src="https://montealvar.com/wp-content/uploads/2020/10/0151_GolfValdeluz_0428-980x653.jpg" alt="Celebración de boda en Montealvar" loading="lazy">
+            <figcaption>Celebraciones en el corazón del bosque de Valdenazar</figcaption>
+          </figure>
+          <figure>
+            <img src="https://montealvar.com/wp-content/uploads/2021/01/0133_GolfValdeluz_0384-scaled-e1611839022787-980x551.jpg" alt="Jardines y ceremonia en Montealvar" loading="lazy">
+            <figcaption>Jardines y ceremonia civil</figcaption>
+          </figure>
+          <figure>
+            <img src="https://montealvar.com/wp-content/uploads/2020/06/Valdeluz-2019-84-980x653.jpg" alt="Decoración de boda en Montealvar" loading="lazy">
+            <figcaption>Detalles y decoración exterior</figcaption>
+          </figure>
+          <figure>
+            <img src="https://montealvar.com/wp-content/uploads/2020/10/0200_GolfValdeluz_0570-980x653.jpg" alt="Banquete de boda en Montealvar" loading="lazy">
+            <figcaption>Banquete y servicio de cocina propia</figcaption>
+          </figure>
+          <figure>
+            <img src="https://montealvar.com/wp-content/uploads/2020/06/Valdeluz-2019-40-980x653.jpg" alt="Espacio exterior para bodas en Montealvar" loading="lazy">
+            <figcaption>Espacios exteriores para cocktail y cena</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section redirect-band" id="presupuesto">
+      <div class="container redirect-grid">
+        <div>
+          <span class="eyebrow">Presupuesto</span>
+          <h2 class="section-title">Continúa la solicitud en Bodas.net.</h2>
+          <p class="section-lead">El perfil oficial de Montealvar en Bodas.net centraliza disponibilidad, opiniones, fotos de parejas y solicitud de presupuesto. Este formulario guarda tu selección en el navegador y te lleva directamente allí.</p>
+        </div>
+        <form class="quote-form" data-wedding-form>
+          <label for="wedding-date">Fecha prevista</label>
+          <input id="wedding-date" name="date" type="date" required>
+          <label for="wedding-guests">Invitados</label>
+          <select id="wedding-guests" name="guests" required>
+            <option value="">Selecciona rango</option>
+            <option>80 - 120 invitados</option>
+            <option>121 - 180 invitados</option>
+            <option>181 - 240 invitados</option>
+            <option>Aún por definir</option>
+          </select>
+          <label for="wedding-name">Nombre</label>
+          <input id="wedding-name" name="name" autocomplete="name" placeholder="Tu nombre" required>
+          <button class="btn btn-primary" type="submit">Ir a Bodas.net</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        <img src="https://montealvar.com/wp-content/uploads/2022/05/LOGO-VERTICAL2b-1022x1024.png" alt="Logo Montealvar">
+        <div>
+          <strong>Montealvar</strong><br>
+          <span>Monasterio de Alcohete, s/n · Yebes, Guadalajara</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="tel:+34949100233">949 100 233</a>
+        <a href="mailto:informacion@montealvar.com">informacion@montealvar.com</a>
+        <a href="https://www.bodas.net/fincas/montealvar--e30637" target="_blank" rel="noreferrer">Perfil en Bodas.net</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script>
+    const BODAS_NET_URL = "https://www.bodas.net/fincas/montealvar--e30637";
+    const form = document.querySelector("[data-wedding-form]");
+    const toast = document.querySelector("[data-toast]");
+    const dateInput = document.querySelector("#wedding-date");
+
+    if (dateInput) {
+      dateInput.min = new Date().toISOString().split("T")[0];
+    }
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      window.setTimeout(() => toast.classList.remove("is-visible"), 2600);
+    }
+
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      localStorage.setItem("montealvarWeddingLead", JSON.stringify({
+        ...data,
+        createdAt: new Date().toISOString()
+      }));
+      showToast("Te llevamos al perfil oficial de Montealvar en Bodas.net.");
+      window.setTimeout(() => {
+        window.location.href = BODAS_NET_URL;
+      }, 650);
+    });
+  </script>
+</body>
+</html>
